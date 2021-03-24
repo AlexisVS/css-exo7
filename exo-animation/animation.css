@@ -1,0 +1,47 @@
+div {
+  animation: monAnimation 2s infinite;
+}
+@keyframes mymove {
+    from {left: 0px;} /* 0% */
+    to {left: 200px;} /* 100% */
+}
+
+@keyframes monAnimation {
+  0% {
+    transform: translate(0,0);
+  }
+  25% {
+    transform: translateX(200px);
+  }
+  50% {
+    transform: translateX(200px)
+                translateY(200px);
+  }
+  75% {
+    transform: translateX(0)
+                translateY(200px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+#bounce-title {
+  animation: bounce 2s infinite;
+  text-align: center;
+  animation-timing-function: cubic-bezier(1,.06,.58,.98);
+}
+@keyframes bounce {
+  0% {
+    transform: rotateX(-75deg);
+    text-shadow: none;
+  }
+  50% {
+    transform: translateY(-120px);
+    font-size: 5rem;
+    text-shadow: none;
+  }
+  100% {
+    transform: rotateX(-65deg);
+    text-shadow: 0 4px 2px black;
+  }
+}
